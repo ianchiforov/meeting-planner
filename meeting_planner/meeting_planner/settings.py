@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'my_meeting_planner_app',
+    'meetings',
 ]
 
 MIDDLEWARE = [
