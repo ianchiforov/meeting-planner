@@ -1,10 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
-
+from meetings.models import Meeting
 
 def welcome(request):
-    return HttpResponse("Welcome to my meeting planner!")
+    return render(request, "my_meeting_planner_app/welcome.html",
+                  {
+                      "num_meetings": Meeting.objects.count()
+                  })
 
 
 def date(request):
