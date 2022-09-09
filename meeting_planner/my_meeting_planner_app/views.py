@@ -3,10 +3,11 @@ from django.http import HttpResponse
 from datetime import datetime
 from meetings.models import Meeting
 
+
 def welcome(request):
     return render(request, "my_meeting_planner_app/welcome.html",
                   {
-                      "num_meetings": Meeting.objects.count()
+                      "meetings": Meeting.objects.all()
                   })
 
 
